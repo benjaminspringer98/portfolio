@@ -25,19 +25,24 @@ scene.add(torus);
 
 //add lighting
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5,5,5);
+pointLight.position.set(0,0,0);
+
+
 const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+scene.add(pointLight);
 
 //add helpers
 const lightHelper = new THREE.PointLightHelper(pointLight);
 scene.add(lightHelper);
 const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(gridHelper);
+//scene.add(gridHelper);
 
 //add controls
 const controls = new OrbitControls(camera, renderer.domElement);
 
+//add background
+const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+scene.background = spaceTexture;
 
 function animate() {
   requestAnimationFrame(animate);
@@ -45,6 +50,8 @@ function animate() {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
+
+  controls.update();
 
   renderer.render(scene, camera);
 }
