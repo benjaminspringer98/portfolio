@@ -5,12 +5,39 @@
   align-items: center;
   width: 100%;
   color: white;
+  font-family: 'Courier New', Courier, monospace;
 }
 
+input[type="text"] {
+  width: 40%;
+  height: 20px; 
+  opacity: 90%;
+  border: 1px solid white;
+  border-radius: 7px;
+}
+
+#submit {
+    margin: 10px;
+    width: 70px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(136, 233, 136, 0.973); 
+    opacity: 90%;
+}
+
+#submit:hover {
+  background-color: rgba(127, 209, 127, 0.973);
+}
+
+
 #result {
-  width: 200px;
-  height: 200px;
-  margin-top: 3%;
+  width: 280px;
+  height: 250px;
+  margin-top: 2%;
+  border-radius: 25px;
+  font-family: 'Courier New', Courier, monospace;
   background-color: white;
   opacity: 75%;
 }

@@ -40,6 +40,8 @@ return {addTextContent}
 })();
 
 //initialisation
+
+
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(55, window.innerWidth  / window.innerHeight, 45, 30000);
