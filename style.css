@@ -36,14 +36,14 @@ input[type="text"] {
   width: 280px;
   height: 250px;
   margin-top: 2%;
+  text-align: center;
   border-radius: 25px;
   font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
   background-color: white;
-  opacity: 75%;
-}
-
-p {
   color: black;
+  opacity: 85%;
 }
 
 canvas {

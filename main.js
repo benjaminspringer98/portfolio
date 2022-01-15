@@ -6,6 +6,7 @@ import { OrbitControls } from 'https://cdn.skypack.dev/three@0.136.0/examples/js
 const button = document.querySelector('button');
 const cityNamePara = document.querySelector('#cityName');
 const temperaturePara = document.querySelector('#temperature');
+const img = document.querySelector('#weatherIcon');
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
@@ -21,7 +22,8 @@ const Weather = (() => {
       const weatherData = await response.json();
       console.log(weatherData);
       DisplayController.addTextContent(weatherData.name, cityNamePara)
-      DisplayController.addTextContent(weatherData.main.temp, temperaturePara)
+      DisplayController.addTextContent(weatherData.main.temp + " °C", temperaturePara)
+      img.src = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`
     } catch(error) {
       console.error(error);
       alert("Please provide a valid city");
